@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.reimaginebanking.api.nessieandroidsdk.NessieError;
@@ -85,12 +87,6 @@ public class Cap1Maps extends AppCompatActivity {
                         mCity = atms.get(0).getAddress().getCity();
                         mState = atms.get(0).getAddress().getmState();
 
-                        System.out.println(atms.get(0).getAddress().getStreetName());
-                        System.out.println(atms.get(0).getName());
-                        System.out.println(atms.get(0).getAddress().getStreetNumber());
-                        System.out.println(atms.get(0).getAddress().getCity());
-                        System.out.println(atms.get(0).getAddress().getmState());
-
                     }
 
                     @Override
@@ -104,12 +100,12 @@ public class Cap1Maps extends AppCompatActivity {
                 // handle error
             }
         });
-        
-        tvName.setText(mName);
-        tvSNum.setText(sNum);
-        tvSName.setText(sName);
-        tvCity.setText(mCity);
-        tvState.setText(mState);
+
+       // tvName.setText(mName);
+        //tvSNum.setText(sNum);
+        //tvSName.setText(sName);
+        //tvCity.setText(mCity);
+        //tvState.setText(mState);
 
         /*
         try {
@@ -141,6 +137,16 @@ public class Cap1Maps extends AppCompatActivity {
         } catch (Exception e) {
             System.out.println("you are a failure");
         }*/
+
+        Button tmh = findViewById(R.id.takemehere);
+        tmh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(Cap1Maps.this, See.class);
+                myIntent.putExtra("key", "Important Message"); //Optional parameters
+                Cap1Maps.this.startActivity(myIntent);
+            }
+        });
     }
 
     private void sendGet() throws Exception {
