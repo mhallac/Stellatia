@@ -56,7 +56,9 @@ public class VoiceControl extends AppCompatActivity {
                     txvResult.setText(result.get(0));
 
                     if (txvResult.getText().toString().contains("ATM")) {
-                        setContentView(R.layout.activity_cap1_maps);
+                        Intent myIntent = new Intent(VoiceControl.this, Cap1Maps.class);
+                        myIntent.putExtra("key", "Important Message"); //Optional parameters
+                        VoiceControl.this.startActivity(myIntent);
                     }
                 }
                 break;

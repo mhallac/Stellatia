@@ -101,7 +101,7 @@ public class Cap1Maps extends AppCompatActivity {
             }
         });
 
-       // tvName.setText(mName);
+        //tvName.setText(mName);
         //tvSNum.setText(sNum);
         //tvSName.setText(sName);
         //tvCity.setText(mCity);
@@ -137,9 +137,8 @@ public class Cap1Maps extends AppCompatActivity {
         } catch (Exception e) {
             System.out.println("you are a failure");
         }*/
-
-        Button tmh = findViewById(R.id.takemehere);
-        tmh.setOnClickListener(new View.OnClickListener() {
+        Button seeButton = findViewById(R.id.takemehere);
+        seeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(Cap1Maps.this, See.class);
@@ -147,6 +146,7 @@ public class Cap1Maps extends AppCompatActivity {
                 Cap1Maps.this.startActivity(myIntent);
             }
         });
+
     }
 
     private void sendGet() throws Exception {
