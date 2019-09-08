@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 //this is a random comment
 public class MainActivity extends AppCompatActivity {
@@ -39,6 +40,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(MainActivity.this, Cap1Maps.class);
+                myIntent.putExtra("key", "Important Message"); //Optional parameters
+                MainActivity.this.startActivity(myIntent);
+            }
+        });
+
+        ImageButton listenButton = findViewById(R.id.listen);
+        listenButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(MainActivity.this, VoiceControl.class);
                 myIntent.putExtra("key", "Important Message"); //Optional parameters
                 MainActivity.this.startActivity(myIntent);
             }
