@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "481537844842",
+    "firebase_url": "https://stellatia-d1e07.firebaseio.com",
+    "project_id": "stellatia-d1e07",
+    "storage_bucket": "stellatia-d1e07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481537844842:android:792c0a2aade42061214c13",
+        "android_client_info": {
+          "package_name": "com.mhallac.stellatia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "481537844842-nvst08viv4kd57r66i3lhiuoqb02ltk5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtxWDXGc3A3jgTPIstn1i-suUUCtZknVU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "481537844842-nvst08viv4kd57r66i3lhiuoqb02ltk5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
