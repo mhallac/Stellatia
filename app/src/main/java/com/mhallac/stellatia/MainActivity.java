@@ -17,7 +17,6 @@ import android.widget.EditText;
 
 //this is a random comment
 public class MainActivity extends AppCompatActivity {
-    public static final String EXTRA_MESSAGE = "com.mhallac.stellatia.MESSAGE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,20 +24,21 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         Button seeButton = findViewById(R.id.see);
         seeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(MainActivity.this, See.class);
+                myIntent.putExtra("key", "Important Message"); //Optional parameters
+                MainActivity.this.startActivity(myIntent);
+            }
+        });
+
+        Button mapsButton = findViewById(R.id.maps);
+        mapsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(MainActivity.this, Cap1Maps.class);
                 myIntent.putExtra("key", "Important Message"); //Optional parameters
                 MainActivity.this.startActivity(myIntent);
             }
