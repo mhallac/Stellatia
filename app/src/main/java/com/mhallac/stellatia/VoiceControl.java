@@ -54,6 +54,10 @@ public class VoiceControl extends AppCompatActivity {
                 if (resultCode == RESULT_OK && data != null) {
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     txvResult.setText(result.get(0));
+
+                    if (txvResult.getText().toString().contains("ATM")) {
+                        setContentView(R.layout.activity_cap1_maps);
+                    }
                 }
                 break;
         }
